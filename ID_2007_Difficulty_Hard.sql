@@ -19,7 +19,44 @@
   status: varchar
   country: varchar
 '''
+with dec_2019 AS(
+SELECT country,
+       sum(number_of_comments) AS total_comments,
+       DENSE_RANK() OVER(ORDER BY  sum(number_of_comments) DESC) AS rank_dec,
+       TO_CHAR(created_at, 'YYYY-MM') AS created_at_ym
+FROM 
+fb_comments_count AS cm
+join fb_active_users AS users
+    ON cm.user_id = users.user_id
+    AND TO_CHAR(created_at, 'YYYY-MM') ='2019-12'
+WHERE country IS NOT NULL
+group by country, created_at_ym
+ ),
+ 
+jan_2020 AS(
+SELECT country,
+       sum(number_of_comments) AS total_comments,
+       DENSE_RANK() OVER(ORDER BY  sum(number_of_comments) DESC) AS rank_jan,
+       TO_CHAR(created_at, 'YYYY-MM') AS created_at_ym
+FROM 
+fb_comments_count AS cm
+join fb_active_users AS users
+    ON cm.user_id = users.user_id
+    AND TO_CHAR(created_at, 'YYYY-MM') ='2020-01'
+WHERE country IS NOT NULL
+group by country, created_at_ym
+ )
+ 
+ select jan_2020.country from 
+ dec_2019
+RIGHT JOIN 
+ jan_2020
+ ON dec_2019.country=jan_2020.country
+ WHERE rank_jan < ranK_dec
+      or rank_dec IS NULL
 
+
+-- ALTERNATE SOLUTION
 WITH 
 dec_2019 AS (
     SELECT 
