@@ -15,7 +15,7 @@
 
 	First 5 rows of the table:
 	---------------------------
-	user_id		session_start			session_end			session_id		session_type
+	user_id		session_start			session_end		session_id		session_type
 	0		2020-08-11 05:51:31		2020-08-11 05:54:45		539			streamer
 	2		2020-07-11 03:36:54		2020-07-11 03:37:08		840			streamer
 	3		2020-11-26 11:41:47		2020-11-26 11:52:01		848			streamer
