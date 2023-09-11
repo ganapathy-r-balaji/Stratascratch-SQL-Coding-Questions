@@ -1,0 +1,48 @@
+'''
+	Top Streamers
+
+	ID 2010
+
+	PROBLEM STATEMENT:
+		List the top 10 users who accumulated the most sessions where they had more streaming sessions than viewing. Return the user_id, number of streaming sessions, and number of viewing sessions.
+
+	Table: twitch_sessions
+	Data Dictionary
+		user_id: int
+		session_start: datetime
+		session_end: datetime
+		session_id: int
+		session_type: varchar
+
+	First 5 rows of the table:
+	---------------------------
+	user_id		session_start			session_end				session_id		session_type
+	0			2020-08-11 05:51:31		2020-08-11 05:54:45		539				streamer
+	2			2020-07-11 03:36:54		2020-07-11 03:37:08		840				streamer
+	3			2020-11-26 11:41:47		2020-11-26 11:52:01		848				streamer
+	1			2020-11-19 06:24:24		2020-11-19 07:24:38		515				viewer
+	2			2020-11-14 03:36:05		2020-11-14 03:39:19		646				viewer
+'''
+
+WITH cte AS (
+	SELECT
+		*,
+		RANK() OVER(ORDER BY (streamer+viewer) DESC) AS rnk
+	FROM
+	(
+	    SELECT 
+	        user_id, 
+	        COUNT(CASE WHEN session_type = 'streamer' THEN 1 ELSE NULL END) AS streamer,
+	        COUNT(CASE WHEN session_type = 'viewer' THEN 1 ELSE NULL END) AS viewer
+	    FROM twitch_sessions
+	    GROUP BY user_id
+	    HAVING COUNT(CASE WHEN session_type = 'streamer' THEN 1 ELSE NULL END) > COUNT(CASE WHEN session_type = 'viewer' THEN 1 ELSE NULL END) 
+	) a
+)
+
+SELECT 
+    user_id,
+    streamer,
+    viewer
+FROM cte
+WHERE rnk <= 10
