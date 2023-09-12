@@ -6,15 +6,15 @@
 		Which partners have ‘pizza’ in their name and are located in Boston? And what is the average order amount? Output the partner name and the average order amount.
 
 
-	Table: postmates_orders								Table: postmates_markets				Table: postmates_partners
-	Data Dictionary                                     Data Dictionary							Data Dictionary
-		id: int												id: int								id: int
-		customer_id: int                                    name: varchar						name: varchar
-		courier_id: int                                     timezone: varchar					category: varchar
-		seller_id: int                                                      
-		order_timestamp_utc: datetime
-		amount: float
-		city_id: int
+	Table: postmates_orders				Table: postmates_markets				Table: postmates_partners
+	Data Dictionary                                 Data Dictionary						Data Dictionary
+	id: int						id: int							id: int
+	customer_id: int                                name: varchar						name: varchar
+	courier_id: int                                 timezone: varchar					category: varchar
+	seller_id: int                                                      
+	order_timestamp_utc: datetime
+	amount: float
+	city_id: int
 	
 	First 5 rows of the "postmates_orders" table:
 	---------------------------
