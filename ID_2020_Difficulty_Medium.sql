@@ -5,9 +5,9 @@
 	PROBLEM STATEMENT:
 		Which company had the biggest month call decline from March to April 2020? Return the company_id and calls difference for the company with the highest decline.
 
-	Table: rc_calls									Table: rc_users				
+	Table: rc_calls					Table: rc_users				
 	Data Dictionary                                 Data Dictionary				
-	user_id: int									user_id: int							
+	user_id: int					user_id: int							
 	date: datetime                                	status: varchar				
 	call_id: int                                 	company_id: int			
 	
