@@ -19,6 +19,13 @@
 	First 5 rows of the "postmates_orders" table:
 	---------------------------
 	id	customer_id	courier_id	seller_id	order_timestamp_utc	amount	city_id
+	1	102	224	79	3/11/2019 23:27	155.73	47
+	2	104	224	75	4/11/2019 4:24	216.6	44
+	3	100	239	79	3/11/2019 21:17	168.69	47
+	4	101	205	79	3/11/2019 2:34	210.84	43
+	5	103	218	71	4/11/2019 0:15	212.6	47
+
+	id	customer_id	courier_id	seller_id	order_timestamp_utc	amount	city_id
 	1	102			224			79			3/11/2019 23:27		155.73	47
 	2	104			224			75			4/11/2019 4:24		216.6	44
 	3	100			239			79			3/11/2019 21:17		168.69	47
