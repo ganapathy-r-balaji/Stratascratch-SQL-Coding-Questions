@@ -5,7 +5,7 @@
 	PROBLEM STATEMENT:
 		Write a query that returns a number of users who are exclusive to only one client. Output the client_id and number of exclusive users.
 
-	Table: postmates_orders
+	Table: fact_events
 	Data Dictionary
 		id: int
 		time_id: datetime
