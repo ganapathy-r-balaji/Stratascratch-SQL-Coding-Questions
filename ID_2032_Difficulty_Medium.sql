@@ -19,11 +19,11 @@
 	First 5 rows of the "signups" table:
 	---------------------------
 	signup_id	signup_start_date	signup_stop_date	plan_id		location
-	100			4/23/2020			5/19/2020			11			Rio De Janeiro
-	101			4/9/2020			7/6/2020			11			Mexico City
-	102			4/21/2020			10/8/2020			10			Mendoza
-	103			4/4/2020			6/19/2020			11			Rio De Janeiro
-	104			4/24/2020			6/28/2020			21			Las Vegas
+	100		4/23/2020		5/19/2020		11		Rio De Janeiro
+	101		4/9/2020		7/6/2020		11		Mexico City
+	102		4/21/2020		10/8/2020		10		Mendoza
+	103		4/4/2020		6/19/2020		11		Rio De Janeiro
+	104		4/24/2020		6/28/2020		21		Las Vegas
 	
 	Table: plans
 	Data Dictionary
@@ -35,12 +35,12 @@
 	First 5 rows of the "plans" table:
 	---------------------------
 	id	billing_cycle	avg_revenue	currency
-	10	monthly			9.9			USD
-	11	quarterly		24.9		USD
-	12	annual			109.9		USD
-	20	monthly			9.9			USD
-	21	quarterly		24.9		USD
-	22	annual			109.9		USD
+	10	monthly		9.9		USD
+	11	quarterly	24.9		USD
+	12	annual		109.9		USD
+	20	monthly		9.9		USD
+	21	quarterly	24.9		USD
+	22	annual		109.9		USD
 '''
 
 SELECT 
