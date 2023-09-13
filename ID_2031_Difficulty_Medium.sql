@@ -9,7 +9,7 @@
 
 	Table: signups
 	Data Dictionary
-		signup_id: int
+		signup_id: int	
 		signup_start_date: datetime
 		signup_stop_date: datetime
 		plan_id: int
