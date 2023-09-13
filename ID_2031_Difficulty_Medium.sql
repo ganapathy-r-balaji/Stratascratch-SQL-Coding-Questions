@@ -3,9 +3,9 @@
 	ID 2031
 
 	PROBLEM STATEMENT:
-		Write a query that returns a list of the bottom 2 companies by mobile usage. Company is defined in the customer_id column. 
-		Mobile usage is defined as the number of events registered on a client_id == 'mobile'. Order the result by the number of events ascending.
-		In the case where there are multiple companies tied for the bottom ranks (rank 1 or 2), return all the companies. Output the customer_id and number of events.
+		Get list of signups which have a transaction start date earlier than 10 months ago from March 2021. For all of those users get the average transaction value and group it by the billing cycle. 		
+		Your output should include the billing cycle, signup_id of the user, and average transaction amount. Sort your results by billing cycle in reverse alphabetical order and signup_id in ascending order.
+
 
 	Table: signups
 	Data Dictionary
@@ -18,11 +18,11 @@
 	First 5 rows of the "signups" table:
 	---------------------------
 	signup_id	signup_start_date	signup_stop_date	plan_id		location
-	100			4/23/2020			5/19/2020			11			Rio De Janeiro
-	101			4/9/2020			7/6/2020			11			Mexico City
-	102			4/21/2020			10/8/2020			10			Mendoza
-	103			4/4/2020			6/19/2020			11			Rio De Janeiro
-	104			4/24/2020			6/28/2020			21			Las Vegas
+	100		4/23/2020		5/19/2020		11		Rio De Janeiro
+	101		4/9/2020		7/6/2020		11		Mexico City
+	102		4/21/2020		10/8/2020		10		Mendoza
+	103		4/4/2020		6/19/2020		11		Rio De Janeiro
+	104		4/24/2020		6/28/2020		21		Las Vegas
 	
 	Table: transactions
 	Data Dictionary
@@ -34,11 +34,11 @@
 	First 5 rows of the "transactions" table:
 	---------------------------
 	transaction_id	signup_id	transaction_start_date	amt
-	1				100			4/30/2020				24.9
-	2				101			4/16/2020				24.9
-	3				102			4/28/2020				9.9
-	4				102			5/28/2020				9.9
-	5				102			6/27/2020				9.9
+	1		100		4/30/2020		24.9
+	2		101		4/16/2020		24.9
+	3		102		4/28/2020		9.9
+	4		102		5/28/2020		9.9
+	5		102		6/27/2020		9.9
 
 	
 	Table: plans
