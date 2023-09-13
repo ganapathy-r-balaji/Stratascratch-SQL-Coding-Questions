@@ -45,9 +45,9 @@
 
 SELECT 
     extract(dow from signup_start_date) AS weekday,
-    COUNT(DISTINCT CASE WHEN billing_cycle='annual' THEN signup_start_date END) AS annual, 
-    COUNT(DISTINCT CASE WHEN billing_cycle='quarterly' THEN signup_start_date END) AS quarterly,
-    COUNT(DISTINCT CASE WHEN billing_cycle='monthly' THEN signup_start_date END) AS monthly
+    COUNT(DISTINCT CASE WHEN billing_cycle='annual' THEN signup_id END) AS annual, 
+    COUNT(DISTINCT CASE WHEN billing_cycle='quarterly' THEN signup_id END) AS quarterly,
+    COUNT(DISTINCT CASE WHEN billing_cycle='monthly' THEN signup_id END) AS monthly
 FROM signups s 
 JOIN plans p ON s.plan_id = p.id  
 GROUP BY 1
