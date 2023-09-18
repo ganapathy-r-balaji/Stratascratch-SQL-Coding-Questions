@@ -25,20 +25,20 @@
 	First 5 rows of the "signups" table:
 	-------------------------------------
 	signup_id	signup_start_date	signup_stop_date	plan_id		location
-	100			2020-04-23			2020-05-19			11			Rio De Janeiro
-	101			2020-04-09			2020-07-06			11			Mexico City
-	102			2020-04-21			2020-10-08			10			Mendoza
-	103			2020-04-04			2020-06-19			11			Rio De Janeiro
-	104			2020-04-24			2020-06-28			21			Las Vegas
+	100		2020-04-23		2020-05-19		11		Rio De Janeiro
+	101		2020-04-09		2020-07-06		11		Mexico City
+	102		2020-04-21		2020-10-08		10		Mendoza
+	103		2020-04-04		2020-06-19		11		Rio De Janeiro
+	104		2020-04-24		2020-06-28		21		Las Vegas
 
 	First 5 rows of the "transactions" table:
 	------------------------------------------
 	transaction_id	signup_id	transaction_start_date		amt
-	1				100			2020-04-30					24.9
-	2				101			2020-04-16					24.9
-	3				102			2020-04-28					9.9
-	4				102			2020-05-28					9.9
-	5				102			2020-06-27					9.9
+	1		100		2020-04-30			24.9
+	2		101		2020-04-16			24.9
+	3		102		2020-04-28			9.9
+	4		102		2020-05-28			9.9
+	5		102		2020-06-27			9.9
 
 '''
 WITH 
