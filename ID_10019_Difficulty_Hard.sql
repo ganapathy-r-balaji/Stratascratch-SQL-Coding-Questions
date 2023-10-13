@@ -16,11 +16,11 @@
 		gasoline_cost: float
 	
 	index	weather		hour	travel_distance		gasoline_cost
-	0		cloudy		7		24.468				1.129
-	1		cloudy		23		23.667				1.993
-	2		sunny		17		20.931				0.859
-	3		rainy		2		29.575				0.848
-	4		rainy		7		16.111				0.952
+	0	cloudy		7	24.468			1.129
+	1	cloudy		23	23.667			1.993
+	2	sunny		17	20.931			0.859
+	3	rainy		2	29.575			0.848
+	4	rainy		7	16.111			0.952
 
 	IN THIS PROBLEM, I HAVE USED TWO DIFFERENT APPROACHES - THE FIRST WITH A COMMON TABLE EXPRESSION, AND THE NEXT WITH A NESTED QUERY.
 '''
