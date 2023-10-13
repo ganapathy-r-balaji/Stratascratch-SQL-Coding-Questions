@@ -31,3 +31,16 @@ WITH cte AS (
 )
 
 SELECT salary FROM cte WHERE drnk = 1
+
+-- -----------------------------------------------------------
+
+SELECT
+    MAX(salary) AS salary
+FROM
+(
+	SELECT
+	        salary
+	FROM employee
+	GROUP BY salary
+	HAVING COUNT(salary) = 1
+) a
