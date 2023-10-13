@@ -8,11 +8,20 @@
 
   Table: lyft_rides
 	Data Dictionary
-		index: int
-        start_date: datetime
-        end_date: datetime
-        yearly_salary: int
-	
+		id: int
+		first_name: varchar
+		last_name: varchar
+		age: int
+		sex: varchar
+		employee_title: varchar
+		department: varchar
+		salary: int
+		target: int
+		bonus: int
+		email: varchar
+		city: varchar
+		address: varchar
+		manager_id: int	
 id	first_name		last_name	age	sex	employee_title	department	salary	target	bonus	email			city		address			manager_id
 5	Max			George		26	M	Sales		Sales		1300	200	150	Max@company.com		California	2638 Richards Avenue	1
 13	Katty			Bond		56	F	Manager		Management	150000	0	300	Katty@company.com	Arizona					1
