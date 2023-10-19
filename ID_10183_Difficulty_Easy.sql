@@ -14,12 +14,12 @@
 		address: varchar
 		phone_number: varchar
 	
-		id	first_name	last_name	city			address					phone_number
-		3	Farida		Joseph		San Francisco	3153 Rhapsody Street	813-368-1200
-		3	Farida		Joseph		San Francisco	3153 Rhapsody Street	813-368-1200
-		3	Farida		Joseph		San Francisco	3153 Rhapsody Street	813-368-1200
-		7	Jill		Michael		Austin									813-297-0692
-		7	Jill		Michael		Austin									813-297-0692
+		id	first_name	last_name	city			address			phone_number
+		3	Farida		Joseph		San Francisco		3153 Rhapsody Street	813-368-1200
+		3	Farida		Joseph		San Francisco		3153 Rhapsody Street	813-368-1200
+		3	Farida		Joseph		San Francisco		3153 Rhapsody Street	813-368-1200
+		7	Jill		Michael		Austin						813-297-0692
+		7	Jill		Michael		Austin						813-297-0692
 
 	Table: orders
 	Data Dictionary
@@ -30,11 +30,11 @@
 		total_order_cost: int
 
 	id	cust_id	order_date	order_details	total_order_cost
-	1	3		3/4/2019	Coat			100
-	2	3		3/1/2019	Shoes			80
-	3	3		3/7/2019	Skirt			30
-	4	7		2/1/2019	Coat			25
-	5	7		3/10/2019	Shoes			80
+	1	3	3/4/2019	Coat		100
+	2	3	3/1/2019	Shoes		80
+	3	3	3/7/2019	Skirt		30
+	4	7	2/1/2019	Coat		25
+	5	7	3/10/2019	Shoes		80
 '''
 	
 SELECT 
