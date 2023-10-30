@@ -41,3 +41,17 @@ SELECT
     name,
     traveled_distance
 FROM cte2 WHERE rnk <= 10
+
+
+'''
+Here is a Python solution
+'''
+
+import pandas as pd
+
+df = lyft_rides_log.merge(lyft_users, left_on='user_id', right_on='id', how='left')
+df.rename(columns={'id_x': 'id'}, inplace=True)
+df.drop('id_y', axis=1, inplace=True)
+df1 = df.groupby(['user_id','name'], as_index=False).agg({'distance': sum})
+df1.sort_values('distance', ascending=False, inplace=True)
+df1[:10]
